@@ -35,7 +35,7 @@ function UploadFile() {
     let { data: mediaurl } = await supabase
     .storage
     .from('happeningmedia')
-    .createSignedUrl(`${formData.location}/${formData.name}.png`, 6000)
+    .createSignedUrl(`${formData.location}/${formData.name}.png`, 60000)
     console.log(mediaurl.signedUrl)
 
     if(mediaurl != null) {

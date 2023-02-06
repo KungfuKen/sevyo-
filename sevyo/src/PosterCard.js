@@ -19,10 +19,13 @@ export default function PosterCard() {
     }, [])
 
     return (
-        cards.map(card => (
-            <div className='bg-black h-screen w-screen'>
-                <CardLayout url={card.media} name={card.name} number={card.number}/>
-            </div>
-        ))
+            cards.map(card => (
+                <div className='bg-black'>
+                    <div className='mt-0'>
+                        <CardLayout url={card.media} name={card.name} number={card.number} 
+                        description={card.description}/>
+                    </div>
+                </div>
+            ))
     );
 }
